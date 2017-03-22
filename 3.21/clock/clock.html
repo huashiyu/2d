@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>clock</title>
+</head>
+<script>
+// time.getHours() 获取小时 getMinutes 获取分钟 getSeconds() 获取秒
+	window.onload=function(){
+
+// 创建表盘
+		var clock=document.querySelector(".clock");
+		for(var i=0;i<60;i++){
+			var div=document.createElement("div");
+			var heights;
+			if (i%5==0) {
+				heights=24;
+			}else{
+				heights=12;
+			}
+			div.style.cssText="width:8px;height:"+heights+"px;background:#777;position:absolute;left:146px;";
+			div.style.transform="rotate("+i*6+"deg)";
+			div.style.transformOrigin="4px 150px"
+			clock.appendChild(div)
+		}
+
+
+		var times=new Date();
+		var th=times.getHours();
+		var tm=times.getMinutes();
+		var ts=times.getSeconds();
+		var s=createpointer(2,130,"#000",ts*6)
+		var m=createpointer(4,100,"#000",tm*6)
+		var h=createpointer(6,70,"#000",th*30+(tm/2))
+
+		var t=setInterval(function(){
+			var times=new Date();
+			var th=times.getHours();
+			var tm=times.getMinutes();
+			var ts=times.getSeconds();
+			s.style.transform="rotate("+ts*6+"deg)";
+			m.style.transform="rotate("+tm*6+"deg)";
+			h.style.transform="rotate("+((th*30)+(tm/2))+"deg)"
+		},1000)
+		function createpointer(w,h,c,r){
+			var div=document.createElement("div");
+			div.style.cssText="width:"+w+"px;height:"+h+"px;background:"+c+";position:absolute;left:"+((300-w)/2)+"px;top:"+(300/2-h)+"px;transform-origin:center "+h+"px;transform:rotate("+r+"deg)"
+			clock.appendChild(div)
+			return div;
+		}
+
+
+	}
+</script>
+<style>
+	.clock{
+		width:300px;
+		height: 300px;
+		border: 5px solid #aaa;
+		border-radius: 50%;
+		background: radial-gradient(#fff,#ccc);
+		box-shadow: 0 0 5px #000;
+		margin: auto;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+</style>
+<body>
+	<div class="clock"></div>
+</body>
+</html>

@@ -1,0 +1,299 @@
+body{
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+
+.cat{
+	display: inline-block;
+	transition:all linear 5s;
+	/*transform-origin:top left;*/
+}
+/*头*/
+.head{
+	position: relative;
+	width: 300px;
+	height: 290px;
+	border-radius: 147px;
+	border: 3px solid #333333;
+	background: linear-gradient(225deg,#eee 5%,#83DEF4 25%,#0BB3DE 70%,#133943 98%)
+}
+/*脸*/
+.face{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: 10px;
+	width: 240px;
+	border-radius: 110px 110px 98px 98px;
+	height: 200px;
+	background: linear-gradient(225deg,#fff 80%,#aaa 97%,#133943);
+	border: 2px solid #111;
+}
+/*脖子*/
+.short{
+	width: 230px;
+	height: 25px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 87%;
+	border-radius: 12px;
+	border: 2px solid #000;
+	background: linear-gradient(225deg,#CC3F00,#8C0700);
+	z-index: 3;
+}
+/*身体*/
+.body{
+	display: inline-block;
+	width: 210px;
+	height: 220px;
+	background: linear-gradient(225deg,#3cdfee 10%,#07BEEA 60%,#0090B6);
+	border: 2px solid #000;
+	margin-top: -20px;
+	position: relative;
+	z-index: 2;
+}
+.inner_body{
+	width: 210px;
+	background: linear-gradient(225deg,#3cdfee 10%,#07BEEA 60%,#0090B6);
+	margin-top: -20px;
+	position: absolute;
+	z-index: 2;
+	height: 220px;
+}
+.leftleg{
+	width: 100px;height: 50px;
+	position: absolute;
+	transform:rotate(150deg)translate(-15px,0);
+	transform-origin:center left;
+	background: linear-gradient(-356deg,#07C2EF,#07BEEA 80%,#456E77);
+	border: 2px solid #000;
+	z-index: 0;
+
+}
+.rightleg{
+	width: 100px;height: 50px;
+	z-index: 0;
+	background: black;
+	position: absolute;
+	transform-origin:center right;
+	transform:rotate(-150deg)translate(15px,0);
+	border: 2px solid #000;
+	background: linear-gradient(-350deg,#4deff0 31%,#23C6ED 79%,#0083A6);
+	right: 0;
+}
+.lefthand{
+    background:linear-gradient(255deg,#E0E0E0 20%,#fff 51%,#E0E0E0);
+	width: 65px;
+	height: 65px;
+	border: 2px solid #000;
+	border-radius: 50%;
+	position: absolute;
+	left: 67px;
+	top: -8px;
+}
+.righthand{
+    background:linear-gradient(255deg,#E0E0E0 20%,#fff 51%,#E0E0E0);
+	width: 65px;
+	height: 65px;
+	border: 2px solid #000;
+	border-radius: 50%;
+	position: absolute;
+	left: -28px;
+	top: -10px;
+}
+.foot{
+	z-index: 4;
+	position: absolute;
+	width: 105px;
+	height: 30px;
+	border: 2px solid #000;
+	top: 95%;
+    background:linear-gradient(184deg,#E0E0E0 20%,#fff 51%,#E0E0E0);
+	border-radius: 14px;
+}
+.leftfoot{
+	left: -12px;
+}
+.rightfoot{
+	right: -12px;
+}
+.kudang{
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	position: absolute;top: 90%;
+	z-index: 3;
+	left: 88px;
+	border-radius: 50% 50% 0 0;
+	border: 2px solid #000;
+	border-bottom: none;
+}
+.eyes{
+	position: absolute;
+	width: 70px;
+	height: 85px;
+	border: 2px solid #000;
+	border-radius: 30px;
+	top: -45px;
+	background: #fff;
+}
+.lefteye{
+	left: 45px;
+}
+.righteye{
+	right: 45px;
+}
+.leyeboll{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: black;
+	position: absolute;
+	top: 15px;
+	left: 85px;
+}
+.reyeboll{
+	width: 15px;
+	border-radius: 50%;
+	background: black;
+	height: 15px;
+	position: absolute;
+	top: 15px;
+	right: 85px;
+}
+.shuhuzi{
+	width: 2px;
+	height: 70px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background: #000;
+}
+.nurse{
+	width: 30px;
+	height: 30px;
+	background: radial-gradient(#fff 1%,#C93E00);
+	border: 2px solid #000;
+	border-radius: 50%;
+	left: 0;
+	right: 0;
+	margin: 40px auto 0;
+}
+.mouse{
+	width: 200px;
+	height: 70px;
+	border-bottom:2px solid #000;
+	border-radius:50%;
+	position: absolute;
+	bottom: 54px;
+	left: 0px;
+	right: 0;
+	margin: auto;
+}
+.huzi{
+	top: 85px;
+	width: 60px;
+	height: 2px;
+	background: black;
+	position: absolute;
+	left: 10px;
+	transform-origin:110px 0;
+}
+.huzi:nth-child(1){
+	transform:rotate(30deg);
+}
+.huzi:nth-child(2){
+	transform:rotate(0deg);
+}
+.huzi:nth-child(3){
+	transform:rotate(-30deg);
+}
+.huzi:nth-child(4){
+	transform:rotate(210deg);
+}
+.huzi:nth-child(5){
+	transform:rotate(180deg);
+}
+.huzi:nth-child(6){
+	transform:rotate(150deg);
+}
+
+.duzi{
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	border:2px solid #000;
+	position: absolute;
+	background: linear-gradient(230deg,#fff 74%,#aaa);
+	left: 0;
+	right: 0;
+	top: -22px;
+	margin: auto;
+	z-index: 2;
+}
+.koudai{
+	width: 100px;
+	height: 60px;
+	border:2px solid #000;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: 20px;
+	border-radius:0 0 70px 70px;
+}
+.lingdang{
+	width: 40px;
+	height: 40px;
+	border:2px solid #000;
+	position: absolute;
+	z-index: 6;
+	left: 0px;
+	right: 0;
+	margin: auto;
+	bottom:-5px;
+	border-radius: 50%;
+	background: radial-gradient(#fff,#C1B90A)
+}
+.xian{
+	width: 38px;
+	background: black;
+	height: 2px;
+	position: absolute;
+	top: 15px;
+}
+.x2{
+	top: 10px;
+}
+.kou{
+	width: 12px;
+	height: 12px;
+	background: black;
+	border-radius: 50%;
+	position: absolute;
+	top: 20px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.shuxian{
+	width: 2px;
+	height: 10px;
+	background: black;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.cat:hover{
+	transform:
+	scale(-1,1)
+	;
+}
